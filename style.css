@@ -402,7 +402,7 @@ body{
 }
 
 .title{
-    font-weight: inter;
+    font-weight: 600;
     font-size: 18px;
     padding: 5px;
     position: relative;
@@ -462,31 +462,90 @@ body{
     
   }
 
-  .left-div {
+.left-div {
     box-shadow: 0px 3px 5px rgba(10, 5, 5, 0.2);
     width: 100%;
     max-width: 600px; /* Largura máxima de 600px */
-    height: 410px;
+    height: 425px;
+    padding: 5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
-  .right-div {
+.right-div {
     display: grid;
     grid-template-rows: 1fr 1fr; /* Duas linhas com altura flexível */
     grid-gap: 10px; /* Espaçamento entre as divs */
     align-items: center; /* Centraliza verticalmente */
   }
 
-  .right-div-top {
+.right-div-top {
     box-shadow: 0px 3px 5px rgba(10, 5, 5, 0.2);
     width: 100%;
-    height: 200px;
+    height: 150px;
   }
 
-  .right-div-bottom {
+.right-div-bottom {
     box-shadow: 0px 3px 5px rgba(10, 5, 5, 0.2);
+    padding: 10px;
     width: 100%;
-    height: 200px;
+    height: 250px;
+    position: relative;
+    bottom: 40px;
   }
+
+.table {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    border-collapse: collapse;
+    border: 1px solid rgb(222, 222, 222);
+    table-layout: auto;
+    position: relative;
+    bottom: 10px;
+}
+
+.table>thead {
+    vertical-align: bottom;
+}
+
+.table thead tr {
+    background-color: #5D5D5D;
+    color: white;
+}
+
+.table th {
+    padding: 8px;
+}
+
+.n{
+    font-size: 14px;
+}
+
+.right-div-top img{
+    width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 10px;
+}
+
+.azul{
+    background-color: #1E6EAA;
+    position: relative;
+    bottom: 10px;
+    padding: 15px;
+    height: 90px;
+    margin: 5px;
+}
+
+.azul p{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
 
   @media (max-width: 768px) {
     /* Alterações para telas menores */
