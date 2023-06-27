@@ -43,26 +43,20 @@ var menus = [
       icon: "bx bx-line-chart",
       submenu: [
         {
-          title: "Funcionários",
+          title: "Usuários",
           link: "/index.html",
         },
         {
-          title: "Grupos",
+          title: "Livros",
           link: "/aluga.html",
         },
-      ],
-    },
-    {
-      title: "Projetos",
-      icon: "bx bxs-network-chart",
-      submenu: [
         {
-          title: "Projetos",
-          link: "/index.html",
+          title: "Editoras",
+          link: "/aluga.html",
         },
         {
-          title: "Gerentes",
-          link: "/index.html",
+          title: "Aluguéis",
+          link: "/aluga.html",
         },
       ],
     },
