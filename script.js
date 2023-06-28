@@ -34,7 +34,7 @@ menu4.addEventListener("click", function () {
 });
 
 var menus = [
-    { title: "Dashboard",
+      { title: "Dashboard",
       icon: "bx bx-home icon",
       link: "/index.html",
     },
@@ -44,7 +44,7 @@ var menus = [
       submenu: [
         {
           title: "Usuários",
-          link: "/index.html",
+          link: "/usuario.html",
         },
         {
           title: "Livros",
@@ -83,7 +83,7 @@ menus.forEach(menu => {
     const menuItemM = document.createElement('li');
     menuItemM.classList.add('item-menu');
 
-    if (menu.title == "Início") {
+    if (menu.title == "Dashboard") {
       menuItem.innerHTML = `<div class="button-menu"><a href="${menu.link}" class="title-btn-menu"><i class="${menu.icon} title-btn-menu-i"></i><p class="title-btn-menu-p">${menu.title}</p></a><i class='bx bxs-chevron-down arrow icon'></div>`;
       menuItemC.innerHTML = `<button type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="${menu.icon}"></i></button>`;
       menuItemM.innerHTML = `<div class="button-menu"><a href="${menu.link}" class="title-btn-menu"><i class="${menu.icon} title-btn-menu-i"></i><p class="title-btn-menu-p">${menu.title}</p></a><i class='bx bxs-chevron-down arrow icon'></div>`;
@@ -185,3 +185,27 @@ for (var i = 1; i < arrows6.length; i++) {
     console.log(arrowParent6);
   });
 }
+
+//Modal
+let deleteButton = document.querySelectorAll(".btnDeleteGrid");
+const deleteModal = document.getElementById("id-modal-delete-container");
+const iconCloseDel = document.getElementById("icon-close-delete");
+const iconCloseDel2 = document.getElementById("btn-canc");
+
+for (var i = 0; i < deleteButton.length; i++) {
+    deleteButton[i].addEventListener("click", (e) => {
+        let btnParentElement = e.target.parentElement.parentElement;
+        console.log(btnParentElement);
+        deleteModal.classList.toggle("modal-delete-show");
+    });
+};
+
+iconCloseDel.addEventListener("click", function () {
+    deleteModal.classList.toggle("modal-delete-show");
+});
+
+iconCloseDel2.addEventListener("click", function () {
+    deleteModal.classList.toggle("modal-delete-show");
+});
+
+//*********************** Tela Usuario **********************/
