@@ -48,15 +48,15 @@ var menus = [
         },
         {
           title: "Livros",
-          link: "/aluga.html",
+          link: "/livros.html",
         },
         {
           title: "Editoras",
-          link: "/aluga.html",
+          link: "/editora.html",
         },
         {
           title: "Aluguéis",
-          link: "/aluga.html",
+          link: "/aluguel.html",
         },
       ],
     },
@@ -186,7 +186,7 @@ for (var i = 1; i < arrows6.length; i++) {
   });
 }
 
-//Modal
+//Modal DASHBOARD
 let deleteButton = document.querySelectorAll(".btnDeleteGrid");
 const deleteModal = document.getElementById("id-modal-delete-container");
 const iconCloseDel = document.getElementById("icon-close-delete");
