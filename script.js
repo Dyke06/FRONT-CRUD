@@ -187,6 +187,31 @@ for (var i = 1; i < arrows6.length; i++) {
 }
 
 //Modal DASHBOARD
+window.onload = function() {
+  let devButton = document.querySelectorAll(".btnDevGrid");
+  const devModal = document.getElementById("id-modal-dev-container");
+  const iconCloseDev = document.getElementById("icon-close-dev");
+  const iconCloseDev2 = document.getElementById("btn-canc");
+
+  for (var i = 0; i < devButton.length; i++) {
+      devButton[i].addEventListener("click", (e) => {
+          let btnParentElement = e.target.parentElement.parentElement;
+          console.log(btnParentElement);
+          devModal.classList.toggle("modal-dev-show");
+      });
+  };
+
+  iconCloseDev.addEventListener("click", function () {
+      devModal.classList.toggle("modal-dev-show");
+  });
+
+  iconCloseDev2.addEventListener("click", function () {
+      devModal.classList.toggle("modal-dev-show");
+  });
+}
+//*********************** MODAL USUARIO **********************/
+
+//Deletar
 let deleteButton = document.querySelectorAll(".btnDeleteGrid");
 const deleteModal = document.getElementById("id-modal-delete-container");
 const iconCloseDel = document.getElementById("icon-close-delete");
@@ -194,8 +219,8 @@ const iconCloseDel2 = document.getElementById("btn-canc");
 
 for (var i = 0; i < deleteButton.length; i++) {
     deleteButton[i].addEventListener("click", (e) => {
-        let btnParentElement = e.target.parentElement.parentElement;
-        console.log(btnParentElement);
+        let btnParentdelElement = e.target.parentElement.parentElement;
+        console.log(btnParentdelElement);
         deleteModal.classList.toggle("modal-delete-show");
     });
 };
@@ -208,4 +233,36 @@ iconCloseDel2.addEventListener("click", function () {
     deleteModal.classList.toggle("modal-delete-show");
 });
 
-//*********************** Tela Usuario **********************/
+
+//Editar
+const BtnAdd = document.getElementById("wda-add");
+let BtnEdit = document.querySelectorAll(".btnUser");
+const modalAdd = document.getElementById("id-modal-wda-container");
+const closeBtnAdd = document.getElementById("icon-modal-close-wda");
+const cancBtnAdd = document.getElementById("button-cancel");
+const titleModalWda = document.getElementById("add-wda-title");
+
+
+BtnAdd.addEventListener("click", function () {
+    modalAdd.classList.toggle("modal-container-show");
+    titleModalWda.innerText = "ADICIONAR FUNCIONÁRIO";
+});
+
+for (var i = 0; i < BtnEdit.length; i++) {
+    BtnEdit[i].addEventListener("click", (e) => {
+        let btnParentElement = e.target.parentElement.parentElement;
+        console.log(btnParentElement);
+        modalAdd.classList.toggle("modal-container-show");
+        titleModalWda.innerText = "EDITAR FUNCIONÁRIO";
+    });
+};
+
+closeBtnAdd.addEventListener("click", function () {
+    modalAdd.classList.toggle("modal-container-show");
+});
+
+cancBtnAdd.addEventListener("click", function () {
+    modalAdd.classList.toggle("modal-container-show");
+});
+
+

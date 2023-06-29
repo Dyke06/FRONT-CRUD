@@ -556,13 +556,13 @@ body{
 
 /** Modal de excluir **/
 
-.btnDeleteGrid{
+.btnDevGrid{
     font-size: 18px;
     color: red;
     cursor: pointer;
 }
 
-#icon-close-delete {
+#icon-close-dev {
     float: right;
     margin-top: 4%;
     margin-right: 4%;
@@ -579,7 +579,7 @@ body{
 }
 
 
-.modal-delete-container {
+.modal-dev-container {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100vh;
@@ -593,14 +593,14 @@ body{
     transition: 200ms;
 }
 
-#icon-close-del {
+#icon-close-dev {
     float: right;
     margin-top: 5px;
     margin-right: 5px;
     cursor: pointer;
 }
 
-.modal-delete {
+.modal-dev {
     overflow: hidden;
     width: 450px;
     height: auto;
@@ -609,18 +609,18 @@ body{
     box-shadow: 0 0 10px 0 rgb(64, 64, 64, 0.4);
 }
 
-.body-modal-delete {
+.body-modal-dev {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.body-modal-delete1 {
+.body-modal-dev1 {
     width: 100%;
     text-align: center;
 }
 
-.body-modal-delete2 {
+.body-modal-dev2 {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -628,7 +628,7 @@ body{
     margin-bottom: 20px;
 }
 
-.modal-delete-show {
+.modal-dev-show {
     opacity: 1;
     pointer-events: auto;
     transition: 200ms;
@@ -640,7 +640,7 @@ body{
     padding-top: 20px;
 }
 
-.div-information {
+.div-information-dev {
     margin-top: 10px;
     width: 90px;
     height: 90px;
@@ -666,7 +666,7 @@ body{
     font-size: 12px;
 }
 
-.btn-mod-del {
+.btn-mod-dev {
     border: none;
     height: 35px;
     font-size: 10px;
@@ -864,7 +864,7 @@ input:focus, textarea:focus {
     border-radius: 3px;
     border-width: 2px;
     box-shadow: none;
-    border-color: #00aaff !important;
+    border-color: #4424d3 !important;
 }
 
 #wda-add {
@@ -924,6 +924,7 @@ input:focus, textarea:focus {
     font-size: 18px;
     color: red;
     position: relative;
+    cursor: pointer;
 }
 
 #icon-user-editar{
@@ -932,6 +933,7 @@ input:focus, textarea:focus {
     position: relative;
     right: 2px;
     bottom: 1px;
+    cursor: pointer;
 }
 
 #icon-user-devolver{
@@ -940,6 +942,7 @@ input:focus, textarea:focus {
     position: relative;
     left: 2px;
     bottom: 1px;
+    cursor: pointer;
 }
 
 #pendente{
@@ -961,7 +964,238 @@ input:focus, textarea:focus {
     border-radius: 20px;
     padding: 4px 20px 4px 20px;
     color: #891111;
+    
 }
+
+/** MODAL USUARIO **/
+
+/*modal de adicionar*/
+.modal-wda-container{
+    background: rgba(0, 0, 0, 0.50);
+    width: 100%;
+    height: 100vh;
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms;
+}
+
+.modal-container-show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 200ms;
+}
+
+.div-modal-wda {
+    background-color: white;
+    width: 65%;
+    height: auto;
+    max-height: 95%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgb(64, 64, 64, 0.4);
+    padding: 2%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#icon-modal-close-wda{
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+#add-wda-title {
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 0;
+}
+
+.grid-add-modal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.cell-grid-add-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.cell-grid-add-modal p{
+    font-size: 12px;
+    margin: 0px;
+}
+
+.input-add{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #d0d0d0;
+    border-radius: 4px;
+}
+
+#button-save{
+    height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    width: 30%;
+    border: none;
+    background-color: #245dfa;
+    color: white;
+    border-radius: 3px;
+}
+
+#button-cancel{
+    width: 30%;
+    height: 40px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+    border: none;
+    background-color: #3E5055;
+    color: white;
+    border-radius: 3px;
+}
+
+/** Modal de excluir **/
+
+.btnDeleteGrid{
+    font-size: 18px;
+    color: red;
+    cursor: pointer;
+}
+
+#icon-close-delete {
+    float: right;
+    margin-top: 4%;
+    margin-right: 4%;
+    cursor: pointer;
+}
+
+#btn-canc {
+    background-color: #3E5055;
+}
+
+#btn-exc {
+    margin-left: 10px;
+    background-color: #00863F;
+}
+
+
+.modal-delete-container {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms;
+}
+
+#icon-close-delete {
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.modal-delete {
+    overflow: hidden;
+    width: 450px;
+    height: auto;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgb(64, 64, 64, 0.4);
+}
+
+.body-modal-delete {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.body-modal-delete1 {
+    width: 100%;
+    text-align: center;
+}
+
+.body-modal-delete2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.modal-delete-show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 200ms;
+}
+
+.actions {
+    display: flex;
+    justify-content: end;
+    padding-top: 20px;
+}
+
+.div-information {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F8C43E;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-exc {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p-text {
+    padding-inline: 30px;
+    margin-top: -10px;
+    font-size: 12px;
+}
+
+.btn-mod-del {
+    border: none;
+    height: 35px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    width: 45%;
+}
+
 
 @media screen and (max-width: 900px) {
 
