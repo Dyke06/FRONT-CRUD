@@ -245,7 +245,7 @@ const titleModalWda = document.getElementById("add-wda-title");
 
 BtnAdd.addEventListener("click", function () {
     modalAdd.classList.toggle("modal-container-show");
-    titleModalWda.innerText = "ADICIONAR FUNCIONÁRIO";
+    titleModalWda.innerText = "ADICIONAR USUÁRIO";
 });
 
 for (var i = 0; i < BtnEdit.length; i++) {
@@ -253,7 +253,7 @@ for (var i = 0; i < BtnEdit.length; i++) {
         let btnParentElement = e.target.parentElement.parentElement;
         console.log(btnParentElement);
         modalAdd.classList.toggle("modal-container-show");
-        titleModalWda.innerText = "EDITAR FUNCIONÁRIO";
+        titleModalWda.innerText = "EDITAR USUÁRIO";
     });
 };
 
