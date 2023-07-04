@@ -235,34 +235,68 @@ iconCloseDel2.addEventListener("click", function () {
 
 
 //Editar
-const BtnAdd = document.getElementById("wda-add");
-let BtnEdit = document.querySelectorAll(".btnUser");
-const modalAdd = document.getElementById("id-modal-wda-container");
-const closeBtnAdd = document.getElementById("icon-modal-close-wda");
-const cancBtnAdd = document.getElementById("button-cancel");
-const titleModalWda = document.getElementById("add-wda-title");
+window.onload = function(){
+  const BtnAdd = document.getElementById("wda-add");
+  let BtnEdit = document.querySelectorAll(".btnUser");
+  const modalAdd = document.getElementById("id-modal-wda-container");
+  const closeBtnAdd = document.getElementById("icon-modal-close-wda");
+  const cancBtnAdd = document.getElementById("button-cancel");
+  const titleModalWda = document.getElementById("add-wda-title");
 
 
-BtnAdd.addEventListener("click", function () {
-    modalAdd.classList.toggle("modal-container-show");
-    titleModalWda.innerText = "ADICIONAR USUÁRIO";
-});
+  BtnAdd.addEventListener("click", function () {
+      modalAdd.classList.toggle("modal-container-show");
+      titleModalWda.innerText = "ADICIONAR USUÁRIO";
+  });
 
-for (var i = 0; i < BtnEdit.length; i++) {
-    BtnEdit[i].addEventListener("click", (e) => {
-        let btnParentElement = e.target.parentElement.parentElement;
-        console.log(btnParentElement);
-        modalAdd.classList.toggle("modal-container-show");
-        titleModalWda.innerText = "EDITAR USUÁRIO";
-    });
-};
+  for (var i = 0; i < BtnEdit.length; i++) {
+      BtnEdit[i].addEventListener("click", (e) => {
+          let btnParentElement = e.target.parentElement.parentElement;
+          console.log(btnParentElement);
+          modalAdd.classList.toggle("modal-container-show");
+          titleModalWda.innerText = "EDITAR USUÁRIO";
+      });
+  };
 
-closeBtnAdd.addEventListener("click", function () {
+  closeBtnAdd.addEventListener("click", function () {
     modalAdd.classList.toggle("modal-container-show");
 });
 
 cancBtnAdd.addEventListener("click", function () {
     modalAdd.classList.toggle("modal-container-show");
+});
+}
+
+//Editora - MODAL
+
+const EBtnAdd = document.getElementById("Ewda-add");
+let EBtnEdit = document.querySelectorAll(".EbtnUser");
+const EmodalAdd = document.getElementById("id-modal-wda-container");
+const EcloseBtnAdd = document.getElementById("icon-modal-close-wda");
+const EcancBtnAdd = document.getElementById("button-cancel");
+const EtitleModalWda = document.getElementById("add-wda-title");
+
+
+EBtnAdd.addEventListener("click", function () {
+    EmodalAdd.classList.toggle("modal-container-show");
+    EtitleModalWda.innerText = "ADICIONAR EDITORA";
+});
+
+for (var i = 0; i < EBtnEdit.length; i++) {
+    EBtnEdit[i].addEventListener("click", (e) => {
+        let btnParentElement = e.target.parentElement.parentElement;
+        console.log(btnParentElement);
+        EmodalAdd.classList.toggle("modal-container-show");
+        EtitleModalWda.innerText = "EDITAR EDITORA";
+    });
+};
+
+EcloseBtnAdd.addEventListener("click", function () {
+    EmodalAdd.classList.toggle("modal-container-show");
+});
+
+EcancBtnAdd.addEventListener("click", function () {
+    EmodalAdd.classList.toggle("modal-container-show");
 });
 
 

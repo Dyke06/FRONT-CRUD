@@ -880,6 +880,19 @@ input:focus, textarea:focus {
     margin-left: 5px;
 }
 
+#Ewda-add {
+    height: 40px;
+    width: 20%;
+    font-size: 11px;
+    display: inline-block;
+    border: none;
+    background-color: #1E6EAA;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
 /** TABLE **/
 #user-table{
     position: relative;
@@ -1028,8 +1041,23 @@ input:focus, textarea:focus {
     width: 100%;
 }
 
+#M-editora{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
 .cell-grid-add-modal{
     display: flex;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+#T-editora{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     width: 100%;
     height: auto;
     padding: 5px;
@@ -1084,6 +1112,7 @@ input:focus, textarea:focus {
     color: white;
     border-radius: 3px;
 }
+
 
 /** Modal de excluir **/
 
@@ -1231,6 +1260,10 @@ input:focus, textarea:focus {
 
     .div-modal-wda{
         width: 95%;
+    }
+
+    #M-editora{
+        display: block;
     }
 
 }

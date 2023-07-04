@@ -86,7 +86,7 @@
                                 <button id="filter-button">FILTRAR</button>
                             </div>
                         </div>
-                        <button id="wda-add">ADICIONAR EDIORA</button>
+                        <button id="Ewda-add">ADICIONAR EDITORA</button>
                     </div>
                     <div id="user-table">
                         <table class="table-large">
@@ -101,7 +101,7 @@
                                 <tr>
                                     <td data-label="Nome">Editora Rocco</td> 
                                     <td data-label="Cidade">São Paulo</td>                                        
-                                    <td data-label="Ações"><i id="icon-user-editar" class="bi bi-pencil-fill"></i>
+                                    <td data-label="Ações"><i id="icon-user-editar" class="bi bi-pencil-fill EbtnUser"></i>
                                         <i id="icon-user-delete" class='bx bxs-trash btnDeleteGrid'></i>
                                     </td>                                        
                                 </tr>
@@ -170,6 +170,37 @@
                                 </tr>
                             </tbody>
                         </table> 
+                    </div>
+
+
+                    <!--Modal de criar-->
+                    <div id="id-modal-wda-container" class="modal-wda-container">
+                        <div class="div-modal-wda">
+                            <div class="modal-header">
+                                <h4 id="add-wda-title">Editar Editora</h4>
+                                <svg id="icon-modal-close-wda" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                    fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+
+                            <div id="M-editora" class="grid-add-modal">
+                                <div id="T-editora" class="cell-grid-add-modal">
+                                    <p>Nome de Editora</p>
+                                    <input class="input-add" type="text" placeholder="Editora Rocco"/>
+                                </div>
+                                <div id="T-editora" class="cell-grid-add-modal">
+                                    <p>Cidade</p>
+                                    <input class="input-add" type="text" placeholder="São Paulo"/>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                <button id="button-cancel">CANCELAR</button>
+                                <button id="button-save">SALVAR</button>
+                            </div>
+                        </div>
                     </div>
 
                      <!-- Modal de deletar -->
