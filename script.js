@@ -269,34 +269,65 @@ cancBtnAdd.addEventListener("click", function () {
 
 //Editora - MODAL
 
-const EBtnAdd = document.getElementById("Ewda-add");
-let EBtnEdit = document.querySelectorAll(".EbtnUser");
-const EmodalAdd = document.getElementById("id-modal-wda-container");
-const EcloseBtnAdd = document.getElementById("icon-modal-close-wda");
-const EcancBtnAdd = document.getElementById("button-cancel");
-const EtitleModalWda = document.getElementById("add-wda-title");
+  const EBtnAdd = document.getElementById("Ewda-add");
+  let EBtnEdit = document.querySelectorAll(".EbtnUser");
+  const EmodalAdd = document.getElementById("id-modal-wda-container");
+  const EcloseBtnAdd = document.getElementById("icon-modal-close-wda");
+  const EcancBtnAdd = document.getElementById("button-cancel");
+  const EtitleModalWda = document.getElementById("add-wda-title");
 
 
-EBtnAdd.addEventListener("click", function () {
-    EmodalAdd.classList.toggle("modal-container-show");
-    EtitleModalWda.innerText = "ADICIONAR EDITORA";
-});
+  EBtnAdd.addEventListener("click", function () {
+      EmodalAdd.classList.toggle("modal-container-show");
+      EtitleModalWda.innerText = "ADICIONAR EDITORA";
+  });
 
-for (var i = 0; i < EBtnEdit.length; i++) {
-    EBtnEdit[i].addEventListener("click", (e) => {
-        let btnParentElement = e.target.parentElement.parentElement;
-        console.log(btnParentElement);
-        EmodalAdd.classList.toggle("modal-container-show");
-        EtitleModalWda.innerText = "EDITAR EDITORA";
+  for (var i = 0; i < EBtnEdit.length; i++) {
+      EBtnEdit[i].addEventListener("click", (e) => {
+          let btnParentElement = e.target.parentElement.parentElement;
+          console.log(btnParentElement);
+          EmodalAdd.classList.toggle("modal-container-show");
+          EtitleModalWda.innerText = "EDITAR EDITORA";
+      });
+  };
+
+  EcloseBtnAdd.addEventListener("click", function () {
+      EmodalAdd.classList.toggle("modal-container-show");
+  });
+
+  EcancBtnAdd.addEventListener("click", function () {
+      EmodalAdd.classList.toggle("modal-container-show");
+  });
+
+
+//Modal - Livro
+
+const LBtnAdd = document.getElementById("Lwda-add");
+let LBtnEdit = document.querySelectorAll(".LbtnUser");
+const LmodalAdd = document.getElementById("id-modal-livro-container");
+const LcloseBtnAdd = document.getElementById("icon-modal-close-wda");
+const LcancBtnAdd = document.getElementById("button-cancel");
+const LtitleModalWda = document.getElementById("add-wda-title");
+
+
+LBtnAdd.addEventListener("click", function () {
+    LmodalAdd.classList.toggle("modal-container-show");
+    LtitleModalWda.innerText = "ADICIONAR LIVRO";
+  });
+
+for (var i = 0; i < LBtnEdit.length; i++) {
+  LBtnEdit[i].addEventListener("click", (e) => {
+      let btnParentElement = e.target.parentElement.parentElement;
+      console.log(btnParentElement);
+      LmodalAdd.classList.toggle("modal-container-show");
+      LtitleModalWda.innerText = "EDITAR LIVRO";
     });
-};
+  };
 
-EcloseBtnAdd.addEventListener("click", function () {
-    EmodalAdd.classList.toggle("modal-container-show");
+LcloseBtnAdd.addEventListener("click", function () {
+  LmodalAdd.classList.toggle("modal-container-show");
 });
 
-EcancBtnAdd.addEventListener("click", function () {
-    EmodalAdd.classList.toggle("modal-container-show");
+LcancBtnAdd.addEventListener("click", function () {
+  LmodalAdd.classList.toggle("modal-container-show");
 });
-
-

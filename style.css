@@ -893,6 +893,19 @@ input:focus, textarea:focus {
     margin-left: 5px;
 }
 
+#Lwda-add {
+    height: 40px;
+    width: 20%;
+    font-size: 11px;
+    display: inline-block;
+    border: none;
+    background-color: #1E6EAA;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
 /** TABLE **/
 #user-table{
     position: relative;
@@ -1253,6 +1266,18 @@ input:focus, textarea:focus {
     }
 
     #wda-add {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #Ewda-add {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #Lwda-add {
         margin-left: 0;
         margin-top: 10px;
         width: 100%;
