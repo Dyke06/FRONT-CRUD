@@ -86,7 +86,7 @@
                                 <button id="filter-button">FILTRAR</button>
                             </div>
                         </div>
-                        <button id="wda-add">ADICIONAR ALUGUEL</button>
+                        <button id="Awda-add">ADICIONAR ALUGUEL</button>
                     </div>
                     <div id="user-table">
                         <table class="table-large">
@@ -108,9 +108,9 @@
                                     <td data-label="Previsão de devolução">18/08/2023</td>                                        
                                     <td data-label="Status"><span id="pendente">PENDENTE</span></td>                                        
                                     <td data-label="Ações">
-                                        <i id="icon-user-editar" class="bi bi-pencil-fill"></i>
-                                        <i id="icon-user-delete" class='bx bxs-trash'></i>
-                                        <i id="icon-user-devolver" class="bi bi-journal-bookmark-fill"></i>
+                                        <i id="icon-user-editar" class="bi bi-pencil-fill AbtnUser"></i>
+                                        <i id="icon-user-delete" class='bx bxs-trash btnDeleteGrid'></i>
+                                        <i id="icon-user-devolver" class="bi bi-journal-bookmark-fill btnDevAluguel"></i>
                                     </td>                                        
                                 </tr>
                                 <tr>
@@ -225,10 +225,149 @@
                         </table> 
                     </div>
 
+                    <!--Modal de criar-->
+                    <div id="id-modal-wda-container-aluguel" class="modal-wda-container-aluguel">
+                        <div class="div-modal-wda-aluguel">
+                            <div class="modal-header-aluguel">
+                                <h4 id="add-wda-title-aluguel"><!--Automatizado no  JS--></h4>
+                                <svg id="icon-modal-close-wda-aluguel" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                    fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg>
+                            </div>
+
+                            <div class="grid-add-modal-aluguel">
+                                <div class="cell-grid-add-modal-aluguel">
+                                    <div><p>Nome de Usuário</p></div>
+                                    <input class="input-add-aluguel" type="text" placeholder="-"/>
+                                </div>
+                                <div class="cell-grid-add-modal-aluguel">
+                                    <div><p>Endereço</p></div>
+                                    <input class="input-add-aluguel" type="text" placeholder="(xx) xxxxx-xxxx"/>
+                                </div>
+                                <div class="cell-grid-add-modal-aluguel">
+                                    <div><p>Cidade</p></div>
+                                    <input class="input-add-aluguel" type="email" placeholder="@gmail.com"/>
+                                </div>
+                                <div class="cell-grid-add-modal-aluguel">
+                                    <div><p>E-mail</p></div>
+                                    <input class="input-add-aluguel" type="email" placeholder="@gmail.com"/>
+                                </div>
+                            </div>
+
+                            <div class="actions-aluguel">
+                                <button id="button-cancel-aluguel">CANCELAR</button>
+                                <button id="button-save-aluguel">SALVAR</button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Modal de deletar -->
+                    <div id="id-modal-delete-container" class="modal-delete-container">
+                        <div id="id-modal-delete" class="modal-delete">
+                            <svg id="icon-close-delete" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg>
+                            <div class="body-modal-delete">
+                                <div class="div-information">i</div>
+                            </div>
+                            <div class="body-modal-delete1">
+                                <p class="p-exc">Excluir usuário</p>
+                                <p class="p-text">Você deseja prosseguir com a exclusão do usuário?</p>
+                            </div>
+                            <div class="body-modal-delete2">
+                                <button id="btn-canc" class="btn-mod-del">CANCELAR</button>
+                                <button id="btn-exc" class="btn-mod-del">EXCLUIR</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!--Modal devolver-->
+                    <div id="id-modal-dev-container" class="modal-dev-container">
+                        <div id="id-modal-dev" class="modal-dev">
+                            <svg id="icon-close-dev" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg>
+                            <div class="body-modal-dev">
+                                <div class="div-information-dev"><i class="bi bi-bookmark-check-fill"></i></div>
+                            </div>
+                            <div class="body-modal-dev1">
+                                <p class="p-exc">Devolver Livro</p>
+                                <p class="p-text">Você deseja continuar com a devolução do livro?</p>
+                            </div>
+                            <div class="body-modal-dev2">
+                                <button id="btn-canc-Aluguel" class="btn-mod-dev">CANCELAR</button>
+                                <button id="btn-exc" class="btn-mod-dev">SIM, DEVOLVER</button>
+                            </div>
+                        </div>
+
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        //modal aluguel
+        const ABtnAdd = document.getElementById("Awda-add");
+        let ABtnEdit = document.querySelectorAll(".AbtnUser");
+        const AmodalAdd = document.getElementById("id-modal-wda-container-aluguel");
+        const AcloseBtnAdd = document.getElementById("icon-modal-close-wda-aluguel");
+        const AcancBtnAdd = document.getElementById("button-cancel-aluguel");
+        const AtitleModalWda = document.getElementById("add-wda-title-aluguel");
+
+
+        ABtnAdd.addEventListener("click", function () {
+            AmodalAdd.classList.toggle("modal-container-show-aluguel");
+            AtitleModalWda.innerText = "ADICIONAR ALUGUEL";
+        });
+
+        for (var i = 0; i < ABtnEdit.length; i++) {
+        ABtnEdit[i].addEventListener("click", (e) => {
+            let btnParentElement = e.target.parentElement.parentElement;
+            console.log(btnParentElement);
+            AmodalAdd.classList.toggle("modal-container-show-aluguel");
+            AtitleModalWda.innerText = "EDITAR ALUGUEL";
+            });
+        };
+
+        AcloseBtnAdd.addEventListener("click", function () {
+        AmodalAdd.classList.toggle("modal-container-show-aluguel");
+        });
+
+        AcancBtnAdd.addEventListener("click", function () {
+        AmodalAdd.classList.toggle("modal-container-show-aluguel");
+        });
+
+
+        //Modal devolver
+        
+        let devButton = document.querySelectorAll(".btnDevAluguel");
+        const devModal = document.getElementById("id-modal-dev-container");
+        const iconCloseDev = document.getElementById("icon-close-dev");
+        const iconCloseDev2 = document.getElementById("btn-canc-Aluguel");
+
+        for (var i = 0; i < devButton.length; i++) {
+            devButton[i].addEventListener("click", (e) => {
+            let btnParentElement = e.target.parentElement.parentElement;
+            console.log(btnParentElement);
+            devModal.classList.toggle("modal-dev-show");
+            });
+        }
+
+        iconCloseDev.addEventListener("click", function() {
+            devModal.classList.toggle("modal-dev-show");
+        });
+
+        iconCloseDev2.addEventListener("click", function() {
+            devModal.classList.toggle("modal-dev-show");
+        });
+        
+
+    </script>
 </body>
 <script src="script.js"></script>
 </html>

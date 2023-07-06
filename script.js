@@ -185,8 +185,8 @@ for (var i = 1; i < arrows6.length; i++) {
     console.log(arrowParent6);
   });
 }
-
-document.addEventListener("DOMContentLoaded", function() {
+// Devolver
+window.onload = function(){
   let devButton = document.querySelectorAll(".btnDevGrid");
   const devModal = document.getElementById("id-modal-dev-container");
   const iconCloseDev = document.getElementById("icon-close-dev");
@@ -200,40 +200,40 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  iconCloseDev.addEventListener("click", function () {
+  iconCloseDev.addEventListener("click", function() {
     devModal.classList.toggle("modal-dev-show");
   });
 
-  iconCloseDev2.addEventListener("click", function () {
+  iconCloseDev2.addEventListener("click", function() {
     devModal.classList.toggle("modal-dev-show");
   });
+}
+
+// Deletar
+let deleteButtons = document.querySelectorAll(".btnDeleteGrid");
+const deleteModal = document.getElementById("id-modal-delete-container");
+const iconCloseDel = document.getElementById("icon-close-delete");
+const iconCloseDel2 = document.getElementById("btn-canc");
+
+for (var i = 0; i < deleteButtons.length; i++) {
+  deleteButtons[i].addEventListener("click", (e) => {
+    let btnParentdelElement = e.target.parentElement.parentElement;
+    console.log(btnParentdelElement);
+    deleteModal.classList.toggle("modal-delete-show");
+  });
+}
+
+iconCloseDel.addEventListener("click", function() {
+  deleteModal.classList.toggle("modal-delete-show");
 });
 
-  // Deletar
-  let deleteButtons = document.querySelectorAll(".btnDeleteGrid");
-  const deleteModal = document.getElementById("id-modal-delete-container");
-  const iconCloseDel = document.getElementById("icon-close-delete");
-  const iconCloseDel2 = document.getElementById("btn-canc");
-
-  for (var i = 0; i < deleteButtons.length; i++) {
-    deleteButtons[i].addEventListener("click", (e) => {
-      let btnParentdelElement = e.target.parentElement.parentElement;
-      console.log(btnParentdelElement);
-      deleteModal.classList.toggle("modal-delete-show");
-    });
-  }
-
-  iconCloseDel.addEventListener("click", function () {
-    deleteModal.classList.toggle("modal-delete-show");
-  });
-
-  iconCloseDel2.addEventListener("click", function () {
-    deleteModal.classList.toggle("modal-delete-show");
-  });
+iconCloseDel2.addEventListener("click", function() {
+  deleteModal.classList.toggle("modal-delete-show");
+});
 
 
 
-//Livro - MODAL
+//Usuario- MODAL
 window.onload = function(){
   const BtnAdd = document.getElementById("wda-add");
   let BtnEdit = document.querySelectorAll(".btnUser");
@@ -330,3 +330,5 @@ LcloseBtnAdd.addEventListener("click", function () {
 LcancBtnAdd.addEventListener("click", function () {
   LmodalAdd.classList.toggle("modal-container-show");
 });
+
+
