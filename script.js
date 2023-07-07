@@ -1,3 +1,4 @@
+
 const menu = document.getElementById("icon-menu");
 
 menu.addEventListener("click", function () {
@@ -33,6 +34,7 @@ menu4.addEventListener("click", function () {
   element.classList.toggle("open");
 });
 
+//links Menu
 var menus = [
       { title: "Dashboard",
       icon: "bx bx-home icon",
@@ -75,6 +77,7 @@ menuListM.classList.add('menu-list-mobile');
 const buttonsClosed = document.createElement('div');
 buttonsClosed.setAttribute("id", "buttons-closed");
 
+//SubMenus
 menus.forEach(menu => {
     const menuItem = document.createElement('li');
     menuItem.classList.add('item-menu');
@@ -132,6 +135,9 @@ menuDiv.appendChild(menuList);
 menuDivM.appendChild(menuListM);
 menuDiv.appendChild(buttonsClosed);
 
+
+//MENU LIST
+
 let arrows = document.querySelectorAll(".menu-list-mobile .item-menu .title-btn-menu-p");
 for (var i = 1; i < arrows.length; i++) {
   arrows[i].addEventListener("click", (e) => {
@@ -185,7 +191,8 @@ for (var i = 1; i < arrows6.length; i++) {
     console.log(arrowParent6);
   });
 }
-// Devolver
+
+// Modal Devolver
 window.onload = function(){
   let devButton = document.querySelectorAll(".btnDevGrid");
   const devModal = document.getElementById("id-modal-dev-container");
@@ -209,7 +216,7 @@ window.onload = function(){
   });
 }
 
-// Deletar
+// Modal Deletar
 let deleteButtons = document.querySelectorAll(".btnDeleteGrid");
 const deleteModal = document.getElementById("id-modal-delete-container");
 const iconCloseDel = document.getElementById("icon-close-delete");
@@ -230,8 +237,6 @@ iconCloseDel.addEventListener("click", function() {
 iconCloseDel2.addEventListener("click", function() {
   deleteModal.classList.toggle("modal-delete-show");
 });
-
-
 
 //Usuario- MODAL
 window.onload = function(){
