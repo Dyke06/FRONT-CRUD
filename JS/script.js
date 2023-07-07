@@ -1,4 +1,4 @@
-
+//SideBar
 const menu = document.getElementById("icon-menu");
 
 menu.addEventListener("click", function () {
