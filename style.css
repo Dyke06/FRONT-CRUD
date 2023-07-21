@@ -1401,6 +1401,7 @@ input:focus, textarea:focus {
 .cell-grid-add-modal-aluguel p{
     font-size: 12px;
     margin: 0px;
+    font-weight: 600;
 }
 
 .input-add-aluguel{

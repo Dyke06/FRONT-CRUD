@@ -38,7 +38,7 @@ menu4.addEventListener("click", function () {
 var menus = [
       { title: "Dashboard",
       icon: "bx bx-home icon",
-      link: "/index.html",
+      link: "/HTML/index.html",
     },
     {
       title: "Administração",
@@ -46,19 +46,19 @@ var menus = [
       submenu: [
         {
           title: "Usuários",
-          link: "/usuario.html",
+          link: "/HTML/usuario.html",
         },
         {
           title: "Livros",
-          link: "/livros.html",
+          link: "/HTML/livros.html",
         },
         {
           title: "Editoras",
-          link: "/editora.html",
+          link: "/HTML/editora.html",
         },
         {
           title: "Aluguéis",
-          link: "/aluguel.html",
+          link: "/HTML/aluguel.html",
         },
       ],
     },
